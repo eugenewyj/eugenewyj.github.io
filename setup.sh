@@ -54,3 +54,12 @@ then
     echo "$passwd"|sudo -S gem update jekyll
     echo "结束升级jekyll..."
 fi
+
+# 安装pygments
+which_pygments=$(which pygmentize)
+if [[ "$which_pygments" == "" ]]
+then
+    echo "开始安装python-pygments..."
+    echo "$passwd"|sudo -S apt-get install python-pygments
+    echo "结束安装python-pygments..."
+fi
