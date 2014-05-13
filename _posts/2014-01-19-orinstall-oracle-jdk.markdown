@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ubuntu14.04安装Oracle JDK"
-date: 2014-01-19 20:16:53 +0800
+date: 2014-01-19 20:16
 comments: true
 categories: Ubuntu
 ---

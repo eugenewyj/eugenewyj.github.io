@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MySQL性能测试调优"
-date: 2014-04-03 19:45:56 +0800
+date: 2014-04-03 19:45
 comments: true
 categories: MySQL
 ---

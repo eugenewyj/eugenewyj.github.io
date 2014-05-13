@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ubuntu 14.04 定义 Intellij IDEA 启动器"
-date: 2014-02-18 16:14:41 +0800
+date: 2014-02-18 16:14
 comments: true
 categories: Ubuntu
 ---

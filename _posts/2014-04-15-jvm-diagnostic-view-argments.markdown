@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JVM诊断之查看运行参数"
-date: 2014-04-15 19:48:36 +0800
+date: 2014-04-15 19:48
 comments: true
 categories: Java
 ---

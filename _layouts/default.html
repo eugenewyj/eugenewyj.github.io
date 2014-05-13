@@ -1,58 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <meta name="description" content="Eugene Wang个人站点">
-    <meta name="author" content="Eugene Wang">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/favicon.png" rel="shortcut icon">
-    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/static/css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/static/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/static/css/application.css" rel="stylesheet" type="text/css" media="all">
-    <script src="/static/js/jquery.js" type="text/javascript"></script>
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<meta charset="utf-8">
+	<title>{{ site.title }}</title>
+	<meta name="author" content="{{ site.author }}">
+	{% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+	<meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+	{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
+	<link rel="canonical" href="{{ canonical }}">
+	<link href="{{ root_url }}static/favicon.png" rel="shortcut icon">
+	<link href="{{ root_url }}static/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-     <div class="page-container">
-     <div class="page-heading">
-         <div class="page-brand">
-             <h1><a href="/">Eugene Wang</a></h1>
-             <h2>性格决定命运，态度决定人生。</h2>
-         </div>
-         <div class="page-navbar">
-             <div class="page-navbar-container">
-                 <ul class="page-nav">
-                     <li><a href="/">主页</a></li>
-                     <li><a href="/archive.html">归档</a></li>
-                     <li><a href="/categories.html">分类</a></li>
-                     <li><a href="/tags.html">标签</a></li>
-                     <li><a href="/about.html">关于</a></li>
-                 </ul>
-             </div>
-         </div>
-     </div>
-     <div class="page-article">
-         {{ content }}
-     </div>
-     <div class="page-footer">
-         <span>
-               &copy; 2014 <a herf="/about.html">Eugene Wang</a>
-             | Powered by <a href="http://jekyllrb.com">Jekyll</a> 
-             | Hosted by <a href="http://github.com">Github.com</a> 
-         </span>
-     </div>
-     </div>
-     <script src="/static/js/bootstrap.js" type="text/javascript"></script>
-     <script src="/static/google-code-prettify/prettify.js" type="text/javascript"></script>
-     <script type="text/javascript">
-        $(document).ready(function() {
-            $('pre').addClass('prettyprint').attr('style', 'overflow:auto');
-            prettyPrint();
-        });
-     </script>
-     {% include google_analysis.md %}
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			    <header id="header" class="inner">
+                    <div class="profilepic">
+                        <a href="{{ site.root }}">
+		                    <img alt='Profile Picture' src='/static/images/tx.jpg' style='width:160px;'/>
+                        </a>
+                    </div>
+                    <h1><a href="{{ site.root }}">{{ site.title }}</a></h1>
+                    <p class="subtitle">{{ site.subtitle }}</p>
+                    <nav id="main-nav">
+                        <ul class="main-navigation">
+                            <li><a href="{{ site.root }}">主页</a></li>
+                            <li><a href="{{ site.root }}archive.html">归档</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="sub-nav">
+	                    <div class="social">
+		                    {% if site.weibo_user %}
+	                    	<a class="weibo" href="http://www.weibo.com/{{ site.weibo_user }}" title="Weibo">Weibo</a>
+		                    {% endif %}
+	                    	{% if site.facebook_user %}
+		                    <a class="facebook" href="http://www.facebook.com/{{ site.facebook_user }}" title="Facebook">Facebook</a>
+		                    {% endif %}
+		                    {% if site.googleplus_user and site.googleplus_hidden == false %}
+		                    <a class="google" href="https://plus.google.com/{{ site.googleplus_user }}" rel="author" title="Google+">Google+</a>
+		                    {% endif %}
+		                    {% if site.twitter_user %}
+		                    <a class="twitter" href="http://twitter.com/{{ site.twitter_user }}" title="Twitter">Twitter</a>
+		                    {% endif %}
+		                    {% if site.github_user %}
+		                    <a class="github" href="https://github.com/{{ site.github_user }}" title="GitHub">GitHub</a>
+		                    {% endif %}
+		                    {% if site.dribbble_user %}
+	                    	<a class="dribbble" href="http://www.dribbble.com/{{ site.dribbble_user }}" title="Dribbble">Dribbble</a>
+	                        {% endif %}
+	                        {% if site.linkedin_user %}
+	                    	<a class="linkedin" href="http://www.linkedin.com/in/{{ site.linkedin_user }}">LinkedIn</a>
+	                    	{% endif %}
+	                        {% if site.pinterest_user %}
+	                        <a class="pinterest" href="https://pinterest.com/{{ site.pinterest_user }}" title="Pinterest">Pinterest</a>
+	                        {% endif %}
+	                        {% if site.delicious_user %}
+	                    	<a class="delicious" href="http://delicious.com/{{ site.delicious_user }}" title="Delicious">Delicious</a>
+	                    	{% endif %}
+	                    	{% if site.pinboard_user %}
+	                    	<a class="pinboard" href="https://pinboard.in/u:{{ site.pinboard_user }}" title="Pinboard">Pinboard</a>
+	                    	{% endif %}
+	                    	{% if site.subscribe_rss %}
+	                    	<a class="rss" href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
+	                    	{% endif %}
+	                    </div>
+                    </nav>
+                    <hgroup>
+                        <h2>纸上得来终觉浅，</h2>
+                        <h2>绝知此事要躬行。</h2>
+                    </hgroup>   
+                </header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			{% unless page.banner == false %}
+				{% include banner.html %}
+			{% endunless %}
+			<div class="mid-col-container">
+				<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
+			</div>
+			<footer id="footer" class="inner">
+                <p>
+                Copyright &copy; {{ site.time | date: "%Y" }} - <a href="http://fengbaoxp.github.io">{{ site.author }}</a> -
+                    <span class="credit">Powered by <a href="http://http://jekyllrb.com/">Jekyll</a></span>
+                    Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
+                </p>
+            </footer>
+	        <script src="{{ site.root }}static/js/slash.js"></script>
+            {% include fancybox.html %} <!-- Delete or comment this line to disable Fancybox -->
+            {% include disqus.html %}
+            {% include google_analytics.html %}
+		</div>
+	</div>
 </body>
 </html>
-

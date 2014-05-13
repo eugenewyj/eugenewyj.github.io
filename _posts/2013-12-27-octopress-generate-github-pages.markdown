@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "利用Octopress创建Github Pages个人博客"
-date: 2013-12-27 22:19:03 +0800
+date: 2013-12-27 22:19
 comments: true
 categories: Octopress
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "监控远程JVM设置"
-date: 2014-02-02 20:22:10 +0800
+date: 2014-02-02 20:22
 comments: true
 categories: Java
 ---

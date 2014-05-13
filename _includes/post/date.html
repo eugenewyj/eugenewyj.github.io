@@ -1,0 +1,12 @@
+{% capture date %}{{ page.date }}{% endcapture %}
+{% capture updated %}{{ page.updated }}{% endcapture %}
+{% if date %}
+    <span class="date">
+        <time datetime="{{ date | datetime | date_to_xmlschema }}" itemprop="datePublished" {% if updated %}data-updated="true"{% endif %}>{{ date | date: "%b %e, %Y" }}</time>
+    </span>
+{% endif %}
+{% if updated %}
+    <span class="updated">
+        {% capture updated %}<time datetime="{{ updated | datetime | date_to_xmlschema }}" itemprop="dateModified">Updated {{ updated | date: "%b %e, %Y" }}</time>{% endcapture %}
+    </span>
+{% endif %}
