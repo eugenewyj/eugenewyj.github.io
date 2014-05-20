@@ -3,7 +3,7 @@ layout: post
 title: "Ubuntu 14.04 定义 Intellij IDEA 启动器"
 date: 2014-02-18 16:14
 comments: true
-categories: Ubuntu
+categories: 软件应用
 ---
 
 #### 创建 `usr\share\applications\idea.desktop` 文件，内容如下：

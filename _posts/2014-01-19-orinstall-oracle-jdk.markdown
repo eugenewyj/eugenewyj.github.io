@@ -3,7 +3,7 @@ layout: post
 title: "Ubuntu14.04安装Oracle JDK"
 date: 2014-01-19 20:16
 comments: true
-categories: Ubuntu
+categories: 软件开发
 ---
 
 ## 下载Oracle JDK

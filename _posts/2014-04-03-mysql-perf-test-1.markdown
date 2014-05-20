@@ -3,7 +3,7 @@ layout: post
 title: "MySQL性能测试调优"
 date: 2014-04-03 19:45
 comments: true
-categories: MySQL
+categories: 数据库
 ---
 
 操作系统

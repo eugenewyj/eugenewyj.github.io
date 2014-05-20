@@ -3,7 +3,7 @@ layout: post
 title: "监控远程JVM设置"
 date: 2014-02-02 20:22
 comments: true
-categories: Java
+categories: 软件开发
 ---
 
 
