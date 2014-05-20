@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Ubuntu 14.04 定义 Intellij IDEA 启动器"
+title: "Ubuntu添加Intellij IDEA启动器"
 date: 2014-02-18 16:14
 comments: true
 categories: 软件应用
 ---
 
 #### 创建 `usr\share\applications\idea.desktop` 文件，内容如下：
-```
+{% highlight bash %}
 [Desktop Entry]
 Encoding=UTF-8
 Version=1.0
@@ -19,4 +19,4 @@ Icon=/usr/local/lib/idea/bin/idea.png
 Terminal=false
 Type=Application
 Categories=Development;IDE
-```
+{% endhighlight %}
