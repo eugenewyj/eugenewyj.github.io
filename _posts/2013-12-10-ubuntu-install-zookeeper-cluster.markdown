@@ -7,11 +7,11 @@ categories: 软件开发
 ---
 
 ## 安装单机版
-参照“[Zookeeper单机安装(Ubuntu Server)](./2013-05-10-ubuntu-install-zookeeper-standalone.markdown)”安装3台单机版。    
+参照“[Zookeeper单机安装(Ubuntu Server)]({% post_url 2013-11-20-ubuntu-install-zookeeper-standalone %})”安装3台单机版。    
 如果采用VirtualBox虚拟机的，可以安装一台后，通过虚拟机复制功能完成。
 
 ## 修改3台机器配置
-* 修改方法参照“[Ubuntu网卡配置]()”和“Ubuntu笔记”的“修改机器名”部分
+* 修改方法参照“[Ubuntu网卡配置]({% post_url 2013-10-25-ubuntu-config-nic %})”和“Ubuntu笔记”的“修改机器名”部分
 
 * 3台机器的名称及IP地址分别为：     
 {% highlight bash %}

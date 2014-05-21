@@ -5,25 +5,16 @@ date: 2014-03-23 19:45
 comments: true
 categories: 数据库
 ---
-
 操作系统
 ====
-
 基本操作
 ----
-
  1. 查看磁盘分区mount选项
-
     `$ mount`
-
  2. 永久修改分区mount选项（系统重启后生效）
-
     `修改文件 /etc/fstab 中对应分区的mount options列的值`
-
  3. 在线修改分区mount选项（系统重启后失效）
-
     `$sudo -t ext4 -o remount,noatime,errors=remount-or /`
-
 文件系统优化
 ----
 

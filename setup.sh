@@ -55,6 +55,23 @@ then
     echo "结束升级jekyll..."
 fi
 
+# 安装kramdown
+which_kramdown=$(which kramdown)
+if [[ "$which_kramdown" == "" ]]
+then
+    echo "开始安装kramdown..."
+    echo "$passwd"|sudo -S gem install kramdown
+    echo "结束安装kramdown..."
+fi
+
+# 升级kramdown
+which_kramdown=$(which kramdown)
+if [[ "$which_kramdown" != "" ]]
+then
+    echo "开始升级kramdown..."
+    echo "$passwd"|sudo -S gem update kramdown
+    echo "结束升级kramdown..."
+fi
 # 安装pygments
 which_pygments=$(which pygmentize)
 if [[ "$which_pygments" == "" ]]
