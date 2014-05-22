@@ -28,6 +28,10 @@ $sudo cp -r zookeeper-3.4.5 /usr/local/lib
 $sudo chown -R /usr/local/lib/zookeeper-3.4.5
 {% endhighlight %}
 
+
+
+
+
 ## 修改Zookeeper配置     
 * 切换到Zookeeper安装目录下的conf(配置文件)目录    
 {% highlight bash %}

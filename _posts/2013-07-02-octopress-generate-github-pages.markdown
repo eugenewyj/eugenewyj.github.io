@@ -10,7 +10,9 @@ categories: 软件应用
 [Octopress](http://octopress.org/)是由[Brandon Mathis](http://brandonmathis.com/)设计的基于[Jekyll](http://github.com/mojombo/jekyll)的静态站点生成框架，用于在[Github Pages](http://pages.github.com/)上创建个人博客。基于Jekyll写博客，你必须自己创建HTML模板，CSS，Javascripts和进行个性化配置。采用Octopress所有这些工作你都不需要自己做，你只需要`clone`或者`fork`Octopress，安装相关依赖和主题就可以了。
 
 ## 前期准备
+
 ### Windows
+
 #### 安装Git
 * 下载最新版本的Git for Windows([`PortableGit-1.8.4-preview20130916.7z`](https://msysgit.googlecode.com/files/PortableGit-1.8.4-preview20130916.7z))。    
 
@@ -23,6 +25,10 @@ categories: 软件应用
 C:\> git version
 git version 1.8.4.msysgit.0
 {% endhighlight %}
+
+
+
+
 
 #### 安装Ruby
 

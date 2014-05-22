@@ -29,6 +29,8 @@ categories: 软件开发
 {% endhighlight %}
         
 
+
+
 ## 修改zookeeper配置
 * 在3台机器上，修改zookeeper配置文件（zoo.cfg），增加下面内容   
 {% highlight bash %}

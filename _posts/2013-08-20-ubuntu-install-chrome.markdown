@@ -23,6 +23,10 @@ $sudo apt-get install libnss3-1d libxss1
 $sudo dpkg -i google-chrome_i386.deb
 {% endhighlight %}   
 
+
+
+
+
 ## Ubuntu 64位系统
 
 * 下载Chrome 64位安装包    

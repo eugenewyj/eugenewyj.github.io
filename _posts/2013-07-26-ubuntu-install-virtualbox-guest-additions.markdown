@@ -24,6 +24,10 @@ $ cd /media/eugene/VBOXADDITIONS_4.2.6_82870
 $ sudo ./VBoxLinuxAdditions.run
 {% endhighlight %}
 
+
+
+
+
 ## Ubuntu 12.10 Server
 首先，通过VirtualBox菜单（设备->安装增强功能）加载增强包加载到光盘。
         

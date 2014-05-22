@@ -25,6 +25,10 @@ $cp jdk-7u7-linux-x64.tar.gz /usr/lib/jvm
 $cd /usr/lib/jvm    
 $sudo tar xzvf jdk-7u7-linux-x64.tar.gz
 {% endhighlight %}   
+
+
+
+
         
 ## 配置环境变量(当前用户）    
 * 只更改当前用户配置，修改~/.bashrc文件    
