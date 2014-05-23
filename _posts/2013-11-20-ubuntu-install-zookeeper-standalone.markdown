@@ -7,7 +7,7 @@ categories: 软件开发
 ---
 
 ## 安装JDK并设置JAVA_HOME    
-参考“[Ubuntu安装Oracle JDK](http://fengbaoxp.github.io/2014-01/orinstall-oracle-jdk/)“。    
+参考“[Ubuntu安装Oracle JDK]({% post_url 2013-09-15-ubuntu-install-oracle-jdk %})“。    
 
 ## 下载Zookeeper        
 到Apache网站下载Zookeeper，我下载的是[zookeeper-3.4.5.tar.gz](http://www.fayea.com/apache-mirror/zookeeper/zookeeper-3.4.5/zookeeper-3.4.5.tar.gz)。

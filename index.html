@@ -6,14 +6,14 @@ title: Eugene Wang
 {% assign index = true %}
 <div itemscope itemtype="http://schema.org/Blog">
 {% for post in paginator.posts %}
-{% assign content = post.content %}
-{% assign date = post.date %}
-{% assign updated = post.updated %}
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="meta">
-    {% if date %}
+    {% if post.date %}
     <span class="date">
-        <time datetime="{{ date | datetime | date_to_xmlschema }}" itemprop="datePublished" {% if updated %}data-updated="true"{% endif %}>{{ date | date: "%b %e, %Y" }}</time>
+        <time datetime="{{ post.date | datetime | date_to_xmlschema }}" itemprop="datePublished" 
+            {% if post.updated %}data-updated="true"{% endif %}>
+            {{ post.date | date: "%b %e, %Y" }}
+        </time>
     </span>
     {% endif %}
 
@@ -37,13 +37,13 @@ title: Eugene Wang
 <nav id="pagenavi">
     {% if paginator.previous_page %}
 	    {% if paginator.previous_page == 1 %}
-		<a href="{{ site.root }}" class="prev">上一页</a>
+		<a href="/" class="prev">上一页</a>
 	    {% else %}
-		<a href="{{ site.root }}page{{paginator.previous_page}}" class="prev">上一页</a>
+		<a href="/page{{paginator.previous_page}}" class="prev">上一页</a>
 	    {% endif %}    
     {% endif %}
     {% if paginator.next_page %}
-        <a href="{{ site.root }}page{{paginator.next_page}}" class="next">下一页</a>
+        <a href="/page{{paginator.next_page}}" class="next">下一页</a>
     {% endif %}
-    <div class="center"><a href="{{ site.root }}archive.html">文章归档</a></div>
+    <div class="center"><a href="/archive.html">文章归档</a></div>
 </nav>
